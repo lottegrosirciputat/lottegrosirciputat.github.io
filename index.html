@@ -12,9 +12,9 @@
     <title>Document</title>
 </head>
   
-  <body id="body" style="background-image: url(include/assets/img/bg.img/lotte1.jpg);">
+<body id="body" style="background-image: url(include/assets/img/bg.img/lotte1.jpg);">
       
-      <?php include 'navbar.php' ?>
+    <?php include 'navbar.php' ?>
 
     <!-- Page markup: Not important -->
     <main id="content">
@@ -25,25 +25,6 @@
       </p> -->
     </main>
 
-    <script src="include/assets/js/index.js"></script>
-    <script src="include/assets/js/greeting.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-        // $('#content').load('applications/sgm_patrol/action_patrol.php');
- 
-        $('.nav-start a').click(function(){
-
-          var hal = $(this).attr('href');
-
-          $('#content').load(hal+'.php');
-
-          return false;
-
-        });
-
-      });
-    </script>
     
 </body>
 </html>
