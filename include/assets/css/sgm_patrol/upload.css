@@ -1,0 +1,111 @@
+.center {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.preview {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-input {
+	width: 50%;
+	display: flex;
+	/*flex-direction: column;*/
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, .1);
+	backdrop-filter: blur(5px);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+}
+.form-input img {
+	width: 50%;
+	display: none;
+	margin-bottom: 30px;
+}
+.form-input #file-ip-1 {
+	display: none;
+}
+.form-input label {
+	display: block;
+	width: 30%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: #1172c2;
+	color: #fff;
+	font-size: 15px;
+	font-family: "Open Sans",sans-serif;
+	text-transform: Uppercase;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.form-input #form {
+	display: none;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.form-input .data-patrol {
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 5px;
+	text-align: center;
+	background-color: rgba(205,205,205);
+	outline: none;
+	margin: 10px;
+}
+.form-input .data-patrol:nth-child(3) {
+	text-align: start;
+}
+.form-input #submit {
+	width: 100px;
+	font-weight: bold;
+	border: 1px solid red;
+	border-radius: 5px;
+	padding: 5px 5px;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+}
+.form-input #promo:focus,
+.form-input #tier:focus,
+.form-input #submit:focus {
+	border: 2px solid #1172c2;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+     margin: 0;
+}
+
+.button_upload {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@media (max-width: 480px) {
+	.form-input {
+		width: 90%;
+		flex-direction: column;
+	}
+	.form-input img {
+		width: 80%;
+	}
+	.center {
+		/*align-items: flex-start;*/
+	}
+
+}

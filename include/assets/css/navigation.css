@@ -1,0 +1,79 @@
+.navigation {
+	position: relative;
+	display: block;
+	width: 200px;
+	/*height: 100vh;*/
+	padding: 10px;
+	background-color: rgba(255, 255, 255);
+    /*backdrop-filter: blur(5px);*/
+    /*box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);*/
+    border-right: 2px solid black;
+}
+
+.navigation h1 {
+    font-family: 'Lobster';
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+	color: var(--blue);
+	text-shadow: 3px 3px 3px black;
+}
+
+.navigation ul {
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.navigation ul li {
+	margin: 5px;
+	list-style: none;
+	cursor: pointer;
+	transition: .2s;
+	padding-left: 20px;
+	line-height: 30px;
+}
+
+.navigation ul li:hover span {
+	transition: .2s;
+	color: cyan;
+}
+
+.navigation ul li:hover .dropdown-list span {
+	color: white;
+}
+
+.navigation ul li .arrow {
+	position: absolute;
+	right: 20px;
+	transition: .2s;
+}
+
+.navigation ul li .arrow.show {
+	transform: rotate(-180deg);
+}
+
+.navigation ul .dropdown-list {
+	position: static;
+	margin-top: 0;
+	display: none;
+}
+
+.navigation ul .dropdown-list.show {
+	display: block;
+}
+
+.navigation ul .dropdown-list li {
+	padding: 0;
+}
+
+.navigation ul .dropdown-list li:hover span {
+	transition: .2s;
+	color: cyan;
+}
+
+@media (max-width: 480px) {
+	.navigation {
+		display: none;
+	}
+}

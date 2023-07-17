@@ -1,0 +1,173 @@
+.main .content {
+	/*width: 100%;*/
+	height: 100vh;
+	/*margin: 20px;*/
+	padding: 20px 20px 50px;
+	background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+    overflow: scroll;
+}
+
+.main .content::-webkit-scrollbar {
+    width: 1vw;
+}
+
+.main .content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.main .content::-webkit-scrollbar-thumb {
+    background-color: #8b909483;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.main .content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--red);
+    background-color: #8b909483;
+    transition: .5s ease-in;
+}
+
+.main .content h2 {
+    font-family: 'Lobster';
+    text-decoration: underline;
+	width: 100%;
+	font-size: 2.5em;
+	color: var(--blue);
+	text-shadow: 2px 2px 2px black;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.main .content .search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main .content .search input {
+	width: 200px;
+	padding: 5px 10px;
+	border: 2px solid var(--blue);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	outline: none;
+	background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(5px);
+	font-weight: bold;
+	text-align: center;
+}
+
+.main .content .search button {
+	width: 75px;
+	padding: 5px 10px;
+	border-top: 2px solid var(--blue);
+	border-right: 2px solid var(--blue);
+	border-bottom: 2px solid var(--blue);
+	border-left: none;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background: var(--blue);
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+@media (max-width: 480px) {
+	.main {
+		overflow-y: hidden; 
+	}
+	.main .header {
+		position: fixed;
+		z-index: 99;
+		height: 50px;
+		justify-content: center;
+	}
+	.main .header img {
+		display: flex;
+		width: 100px;
+	}
+	.main .header h3 {
+		display: none;
+	}
+	.main .cont {
+		position: fixed;
+		
+		border-top-left-radius: 35px;
+		border-top-right-radius: 35px;
+	}
+	.main .content {
+		margin-top: 50px;
+		overflow: hidden;
+		height: calc(100% - 50px);
+	}
+	.main .content .home {
+		display: flex;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.main .content h4 {
+		padding: 2px 5px;
+		width: 25vw;
+		background-color: var(--red);
+		display: flex;
+		align-items: center;
+		font-size: 4vw;
+		border-radius: 7px;
+		color: white;
+	}
+	.main .content h4 img {
+		display: flex;
+		align-items: center;
+		width: 5vw;
+		height: 5vw;
+	}
+	.main .content form .tab {
+		overflow-x: hidden;
+		overflow-x: scroll;
+	}
+	.main .content form .aisle {
+		width: 100%;
+		overflow: hidden;
+	}
+	.main .content form .bay {
+		width: 100%;
+		overflow-x: scroll;
+	}
+	.main .content form .bay tr {
+		display: grid;
+		/*grid-template-columns: 1fr .75fr 1fr 35px;*/
+		grid-template-columns: repeat(2, 120px) 200px 50px;
+		overflow-x: scroll;
+	}
+	.main .content form .bay tr td {
+		padding: 0 5px;
+		overflow-x: scroll;
+	}
+	.main .content form .bay tr td:last-child {
+		padding: 0;
+	}
+	.main .content form .bay tr td input {
+		font-size: .8em;
+	}
+	.main .content form .tab::-webkit-scrollbar {
+    	width: 0;
+	}
+	.main .content form .tab::-webkit-scrollbar-track {
+	    background-color: transparent;
+	}
+	.main .content form .tab::-webkit-scrollbar-thumb {
+	    /*background-color: #8b909483;*/
+	    border-radius: 15px;
+	    border: 2px solid transparent;
+	    background-clip: content-box;
+	}
+	.main .content form .tab::-webkit-scrollbar-thumb:hover {
+	    background-color: transparent;
+	}
+}

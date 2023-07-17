@@ -1,0 +1,117 @@
+.cont-login {
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	/*margin: 20px;*/
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.cont-login h2 {
+	font-size: 4vmax;
+	color: var(--red);
+	text-shadow: -5px -5px 10px rgba(0, 0, 0, .8);
+	/*font-family: 'Oswald', sans-serif;*/
+    animation: welcome .5s forwards;
+}
+
+@keyframes welcome {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.login {
+	position: relative;
+	width: 25vw;
+	height: 400px;
+	display: flex;
+	/*visibility: hidden;*/
+	flex-direction: column;
+	padding: 20px 0;
+	/*justify-content: center;*/
+	align-items: center;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .1);
+	backdrop-filter: blur(5px);
+    box-shadow: 10px -10px 15px rgba(0, 0, 0, .5);
+    border-bottom: 1px solid rgba(255, 255, 255);
+    border-left: 1px solid rgba(255, 255, 255);
+    animation: login .5s forwards;
+}
+
+@keyframes login {
+    from {transform: perspective(800px) rotateY(150deg);}
+    to {transform: perspective(800px) rotateY(0);}
+}
+
+.login img {
+	width: 10vw;
+	margin: 20px 0;
+}
+
+.login h3 {
+	font-size: 1.2vw;
+	font-weight: 500;
+	margin: 10px 0 15px;
+	align-items: center;
+	display: flex;
+}
+
+.login input {
+	width: 50%;
+	margin: 7px 0;
+	padding: 7px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, .7);
+	text-align: center;
+}
+
+.login input::-webkit-outer-spin-button,
+.login input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.login button {
+	background-color: var(--blue);
+	padding: 7px 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	outline: none;
+	color: white;
+}
+
+.login p {
+	position: absolute;
+	bottom: 20px;
+}
+
+@media (max-width: 480px) {
+	.cont-login {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.cont-login h2 {
+		font-size: 1.5em;
+		margin: 5vh 0;
+	}
+	.login {
+		width: 75vw;
+	}
+	.login img {
+		width: 35vw;
+	}
+	.login h3 {
+		font-size: .8em;
+	}
+	.login input {
+		width: 60%;
+	}
+	.login p {
+		font-size: .7em;
+	}
+}

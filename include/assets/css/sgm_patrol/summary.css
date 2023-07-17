@@ -1,0 +1,120 @@
+.sort-sum-patrol {
+	width: 100%;
+	/*height: 5vh;*/
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.sort-sum-patrol input,
+.sort-sum-patrol select {
+	width: 150px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, .5);
+	backdrop-filter: blur(5px);
+	padding: 5px;
+	margin: 0 10px;
+}
+
+.main-sum-patrol {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+	width: 100%;
+	/*height: 80vh;*/
+	padding: 20px;
+}
+
+.main-sum-patrol table {
+	backdrop-filter: blur(5px);
+}
+
+.main-sum-patrol table tr {
+	cursor: pointer;
+}
+
+.main-sum-patrol table tr th,
+.main-sum-patrol table tr td {
+	padding: 5px;
+	font-size: 1.3vw;
+	text-align: center;
+}
+
+.main-sum-patrol table tr th:nth-child(1),
+.main-sum-patrol table tr td:nth-child(1) {
+	width: 10%;
+}
+
+.main-sum-patrol table tr th:nth-child(3),
+.main-sum-patrol table tr td:nth-child(3),
+.main-sum-patrol table tr th:nth-child(4),
+.main-sum-patrol table tr td:nth-child(4) {
+	width: 20%;
+}
+
+.main-sum-patrol table tr:nth-child(odd) {
+	background-color: rgba(219,228,241,.5);
+}
+
+.main-sum-patrol table tr:nth-child(even) {
+	background-color: rgba(241,244,249,.5);
+}
+
+.main-sum-patrol table tr:hover {
+	background-color: rgba(205,205,205,.5);
+}
+
+.main-sum-patrol table thead tr th {
+	height: 40px;
+	cursor: default;
+	background-color: rgba(238,23,31);
+	color: white;
+	font-size: 1em;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.main-sum-patrol table tr td img {
+	width: 20vw;
+	height: 20vw;
+	margin-bottom: -5px;
+}
+
+.sum-button-act {
+	width: 100%;
+	display: flex;
+	padding: 20px;
+}
+
+.sum-button-act button {
+	padding: 5px 20px;
+	font-size: 1em;
+	margin: auto;
+	border-radius: 5px;
+	background: var(--blue);
+	color: white;
+}
+
+@media (max-width: 480px) {
+	.sort-sum-patrol {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+  	.main-sum-patrol table thead tr th {
+  		font-size: .7em;
+  	}
+  	.main-sum-patrol table tr td {
+  		font-size: .6em;
+  	}
+  	.main-sum-patrol table tr td img {
+  		margin-bottom: 0;
+  	}
+  	.sum-button-act button {
+  		font-size: .7em;
+  	}
+}
+
