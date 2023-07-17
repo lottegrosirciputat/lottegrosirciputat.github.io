@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="include/assets/css/root.css">
+    <link rel="stylesheet" href="include/assets/css/sgm_patrol/upload.css">
+    <link rel="stylesheet" href="include/assets/css/sgm_patrol/summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="include/assets/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+  
+  <body id="body" style="background-image: url(include/assets/img/bg.img/lotte1.jpg);">
+      
+      <?php include 'navbar.php' ?>
+
+    <!-- Page markup: Not important -->
+    <main id="content">
+      <h1>Good <span id="greeting"></span> <span class="user"><?= $_SESSION['emp_nm'] ?></span></h1>
+      <!-- <p>
+        Want to learn how to make this?
+        <a style="text-decoration: underline; color: var(--primary-color)" href="https://www.freecodecamp.org/news/how-to-build-a-responsive-navigation-bar-with-dropdown-menu-using-javascript/" target="_blank">Read the tutorial</a>
+      </p> -->
+    </main>
+
+    <script src="include/assets/js/index.js"></script>
+    <script src="include/assets/js/greeting.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // $('#content').load('applications/sgm_patrol/action_patrol.php');
+ 
+        $('.nav-start a').click(function(){
+
+          var hal = $(this).attr('href');
+
+          $('#content').load(hal+'.php');
+
+          return false;
+
+        });
+
+      });
+    </script>
+    
+</body>
+</html>
