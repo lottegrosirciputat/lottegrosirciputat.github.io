@@ -1,8 +1,33 @@
+<?php
+
+session_start();
+
+if ( $_SESSION['emp_id'] == '' ) {
+
+  header("Location: include/config/login");
+
+}
+
+date_default_timezone_set('Asia/Jakarta');
+$time = date("H");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Pure Surface">
+    <meta property="og:title" content="225 Days of Self Sanitizing Surface from Coronavirus">
+    <meta property="og:description" content="Just 1 time application">
+    <meta property="og:image" itemprop="image" content="https://lsi06.infinityfreeapp.com/include/assets/img/icons/logo.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
+    <meta property="og:url" content="https://lsi06.infinityfreeapp.com">
     <link rel="stylesheet" href="include/assets/css/root.css">
     <link rel="stylesheet" href="include/assets/css/sgm_patrol/upload.css">
     <link rel="stylesheet" href="include/assets/css/sgm_patrol/summary.css">
@@ -11,6 +36,177 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-    <iframe src="https://lsi06.infinityfreeapp.com/include/config/login.php" frameborder="0"></iframe>
+
+<?php if ( $time >= 06 AND $time < 18 ): ?>
+  
+  <body id="body" style="background-image: url(include/assets/img/bg.img/lotte1.jpg);">
+
+<?php else : ?>
+
+  <body id="body" style="background-image: url(include/assets/img/bg.img/lotte2.jpg);">
+
+<?php endif; ?>
+
+<?php if (@$_SESSION['upload-action']) : ?>
+
+  <style>
+      .colored-toast.swal2-icon-success {
+        background-color: #2481C1 !important;
+      }
+  </style>
+
+  <script>
+
+      $(document).ready(function(){
+
+        $('#content').load('applications/sgm_patrol/action_patrol.php');
+
+      });
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        iconColor: 'white',
+        customClass: {
+          popup: 'colored-toast'
+        },
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true
+      })
+      Toast.fire({
+        icon: 'success',
+        title: "<?= $_SESSION['upload-action']; ?>",
+        color: 'white'
+      })
+
+  </script>
+    
+<?php
+
+unset($_SESSION['upload-action']);
+
+elseif (@$_SESSION['upload-patrol']) : ?>
+
+  <style>
+      .colored-toast.swal2-icon-success {
+        background-color: #2481C1 !important;
+      }
+  </style>
+
+  <script>
+
+      $(document).ready(function(){
+
+        $('#content').load('applications/sgm_patrol/upload.php');
+
+      });
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        iconColor: 'white',
+        customClass: {
+          popup: 'colored-toast'
+        },
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true
+      })
+      Toast.fire({
+        icon: 'success',
+        title: "<?= $_SESSION['upload-patrol']; ?>",
+        color: 'white'
+      })
+
+  </script>
+    
+<?php
+
+unset($_SESSION['upload-patrol']);
+
+elseif (@$_SESSION['delete']) : ?>
+
+  <style>
+      .colored-toast.swal2-icon-success {
+        background-color: #2481C1 !important;
+      }
+  </style>
+
+  <script>
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        iconColor: 'white',
+        customClass: {
+          popup: 'colored-toast'
+        },
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true
+      })
+      Toast.fire({
+        icon: 'success',
+        title: "<?= $_SESSION['delete']; ?>",
+        color: 'white'
+      })
+
+      $(document).ready(function(){
+
+        $('#content').load('applications/sgm_patrol/summary.php');
+
+      });
+
+  </script>
+    
+<?php
+
+unset($_SESSION['delete']);
+
+endif;
+
+?>
+
+  <?php include 'navbar.php' ?>
+
+    <!-- Page markup: Not important -->
+    <main id="content">
+      <h1 id="index">Good <span id="greeting"></span> <span class="user"><?= $_SESSION['emp_nm'] ?></span></h1>
+    </main>
+
+    <script type="text/javascript">
+      // $(document).ready(function(){
+        // $('#content').load('applications/sgm_patrol/action_patrol.php');
+ 
+        $('.nav-start .logo').click(function(){
+
+          var hal = $(this).attr('href');
+
+          loation.href = '../lottegrosirciputat/'
+
+        });
+
+      // });
+
+      $(document).ready(function(){
+        // $('#content').load('applications/sgm_patrol/action_patrol.php');
+ 
+        $('.nav-start a').click(function(){
+
+          var hal = $(this).attr('href');
+
+          $('#content').load(hal+'.php');
+
+          return false;
+          document.querySelectorAll(".dropdown").classList.remove("active");
+
+        });
+
+      });
+    </script>
+    
+
+    <script src="include/assets/js/index.js"></script>
+    <script src="include/assets/js/greeting.js"></script>
 </body>
 </html>
