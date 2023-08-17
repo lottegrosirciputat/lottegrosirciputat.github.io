@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	position: relative;
+}
+
+.header1-1,
+.header1-2,
+.header1-3 {
+	width: 100%;
+	position: relative;
+}
+
+.header1-1 img {
+	position: relative;
+	width: 175px;
+}
+
+.header1-2 {
+	width: 100%;
+	position: relative;
+}
+
+.header1-2 p {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.header1-2 p span {
+	position: absolute;
+	right: 20px;
+}
+
+.header1-3 h3 {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.main {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.main .table1 {
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	border-collapse: collapse;
+}
+
+.main .table1 tr {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 200px 10px 1fr;
+}
+
+.main .table1 tr th {
+	width: 200px;
+	text-align: left;
+}
+
+.main .table1 tr td {
+	width: 100%;
+	display: block;
+}
+
+.main .table1 tr td textarea {
+	width: calc(100% - 10px);
+	columns: 10px;
+	padding: 5px;
+	font-size: 1em;
+    resize: none;
+    background-color: rgb(210,210,210);
+}
+
+.main .table2 {
+	width: 100%;
+	margin: 30px 0;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.main .table2 tr {
+	width: 100%;
+	border: 2px solid black;
+}
+
+.main .table2 tr:first-child {
+	background-color: #A8D1F7;
+}
+
+.main .table2 .sign td {
+	height: 75px;
+}
+
+.main .table2 tr td {
+	width: 20%;
+	border: 2px solid black;
+	padding: 2px 5px;
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.main .table2 tr td input {
+	width: 100%;
+	outline: none;
+	font-size: 15px;
+	text-transform: capitalize;
+	background-color: rgb(210,210,210);
+	border: 1px solid black;
+	text-align: center;
+	font-weight: bold;
+}
+
+.main .footer {
+	position: absolute;
+	right: 0;
+	font-size: .9em;
+	background-color: #e31f27;
+	padding: 5px 15vw;
+	color: white;
+}
+
+.main .submit {
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin-top: 50px;
+	justify-content: center;
+}
+
+.main .submit button {
+	width: 100px;
+	margin: 0 5px;
+	display: flex;
+	justify-content: center;
+	padding: 7px 15px;
+	background-color: #28a745;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: .8em;
+	cursor: pointer;
+}
+
+.main .submit button:nth-child(2) {
+	background-color: #2481C1;
+}
+
+.main .submit button:nth-child(3) {
+	background-color: #464141;
+}
